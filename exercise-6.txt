@@ -1,0 +1,23 @@
+mysql> SHOW DATABASES;
++------------------------------+
+| Database                     |
++------------------------------+
+| information_schema           |
+| c9                           |
+| decodemtl_addressbook_import |
+| mysql                        |
+| performance_schema           |
++------------------------------+
+5 rows in set (0.00 sec)
+
+mysql> USE decodemtl_addressbook_import;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> DROP Account;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Account' at line 1
+mysql> DROP TABLE ACCOUNT;
+ERROR 1051 (42S02): Unknown table 'ACCOUNT'
+mysql> DROP TABLE Account;
+Query OK, 0 rows affected (0.01 sec)
