@@ -1,0 +1,32 @@
+mysql> USE decodemtl_addressbook_import;
+Database changed
+mysql> SELECT * FROM Account;
++----+----------------+----------+---------------------+------------+
+| id | email          | password | createdOn           | modifiedOn |
++----+----------------+----------+---------------------+------------+
+|  1 | askl@gmail.com | pa55w0rd | 2016-09-22 00:00:00 | NULL       |
+|  2 | askl@gmail.com | pa55w0rd | 2016-09-22 00:00:00 | NULL       |
++----+----------------+----------+---------------------+------------+
+2 rows in set (0.01 sec)
+
+mysql> SELECT * FROM AddressBook;
++----+-----------+--------+---------------------+------------+
+| id | accountId | name   | createdOn           | modifiedOn |
++----+-----------+--------+---------------------+------------+
+|  1 |      5608 | Ula    | 2016-09-22 00:00:00 | NULL       |
+|  2 |         0 | Ulaize | 2015-09-22 00:00:00 | NULL       |
++----+-----------+--------+---------------------+------------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT * FROM Entry;
++----+---------------+-----------+-----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+| id | addressBookId | firstName | lastName  | birthday            | type | subtype | contentLineOne | contentLineTwo | contentLineThree | contentLineFour | contentLineFive |
++----+---------------+-----------+-----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+|  1 |        234892 | Ulaize    | Hernandez | 1989-03-30 00:00:00 | home | phone   | 5555555        | NULL           | NULL             | NULL            | NULL            |
+|  2 |             0 | Aviva     | Avibosa   | 1990-06-13 00:00:00 | home | phone   |                | NULL           | NULL             | NULL            | NULL            |
+|  3 |             0 | Ula       | Her       | 1980-06-13 00:00:00 | home | phone   |                | NULL           | NULL             | NULL            | NULL            |
+|  4 |             0 | Cath      | Her       | 1980-07-13 00:00:00 | home | phone   |                | NULL           | NULL             | NULL            | NULL            |
++----+---------------+-----------+-----------+---------------------+------+---------+----------------+----------------+------------------+-----------------+-----------------+
+4 rows in set (0.00 sec)
+
+mysql> 
