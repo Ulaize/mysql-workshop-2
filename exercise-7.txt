@@ -1,0 +1,19 @@
+mysql> SHOW DATABASES;
+
+mysql> USE decodemtl_addressbook_import;
+
+mysql> source data/import-table-structure.sql;
+
+
+
+mysql> source data/import-account.sql;
+
+mysql> SELECT * FROM Account;
+
+mysql> source data/import-addressbook.sql;
+
+mysql> SELECT * FROM Addressbook;
+
+mysql> source data/import-entry.sql;
+
+mysql> SELECT * FROM Entry;
