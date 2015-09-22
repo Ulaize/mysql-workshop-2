@@ -1,0 +1,26 @@
+
+mysql> SELECT COUNT(*) FROM Entry WHERE sybtype!="other";
+ERROR 1054 (42S22): Unknown column 'sybtype' in 'where clause'
+mysql> SELECT COUNT(*) FROM Entry WHERE subtype!="other";
++----------+
+| COUNT(*) |
++----------+
+|     4000 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> SELECT COUNT(*) FROM Entry WHERE type="other" OR "work";
++----------+
+| COUNT(*) |
++----------+
+|     1200 |
++----------+
+1 row in set, 1 warning (0.01 sec)
+
+mysql> SELECT COUNT(*) FROM Entry WHERE subtype!="phone";
++----------+
+| COUNT(*) |
++----------+
+|     3400 |
++----------+
+1 row in set (0.00 sec)
