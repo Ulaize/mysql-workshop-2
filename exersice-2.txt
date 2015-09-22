@@ -103,3 +103,14 @@ mysql> DESCRIBE Entry;
 
 mysql> INSERT INTO Entry (addressBookId, firstName, lastName, birthday, type, subtype, contentLineOne) VALUES('234892', 'Ulaize','Hernandez','1989-03-30','home','phone','5555555');
 Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO decodemtl_addressbook_import.Entry (firstName, lastName, birthday) VALUES('Aviva','Avibosa','1990-06-13');                                  
+Query OK, 1 row affected, 2 warnings (0.01 sec)
+
+mysql> INSERT INTO decodemtl_addressbook_import.Entry (firstName, lastName, birthday) VALUES('Ula','Her','1980-06-13');                                        
+Query OK, 1 row affected, 2 warnings (0.00 sec)
+
+mysql> INSERT INTO decodemtl_addressbook_import.Entry (firstName, lastName, birthday) VALUES('Cath','Her','1980-07-13');                                       
+Query OK, 1 row affected, 2 warnings (0.00 sec)
+
+
