@@ -1,0 +1,49 @@
+mysql> UPDATE decodemtl_addressbook_import.Account SET email = "xxx@gmail.com" WHERE id=1;                                                                    
+Query OK, 1 row affected (0.02 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM Account;
+ERROR 1046 (3D000): No database selected
+mysql> USE decodemtl_addressbook_import;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> SELECT * FROM Account;
++----+----------------+----------+---------------------+------------+
+| id | email          | password | createdOn           | modifiedOn |
++----+----------------+----------+---------------------+------------+
+|  1 | xxx@gmail.com  | pa55w0rd | 2016-09-22 00:00:00 | NULL       |
+|  2 | askl@gmail.com | pa55w0rd | 2016-09-22 00:00:00 | NULL       |
++----+----------------+----------+---------------------+------------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT * FROM Addressbook;
+ERROR 1146 (42S02): Table 'decodemtl_addressbook_import.Addressbook' doesn't exist
+mysql> SELECT * FROM AddressBook;
++----+-----------+--------+---------------------+------------+
+| id | accountId | name   | createdOn           | modifiedOn |
++----+-----------+--------+---------------------+------------+
+|  1 |      5608 | Ula    | 2016-09-22 00:00:00 | NULL       |
+|  2 |         0 | Ulaize | 2015-09-22 00:00:00 | NULL       |
++----+-----------+--------+---------------------+------------+
+2 rows in set (0.00 sec)
+
+
+mysql> UPDATE AddressBook SET name = "Eka" WHERE id=1;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM AddressBook;
++----+-----------+--------+---------------------+------------+
+| id | accountId | name   | createdOn           | modifiedOn |
++----+-----------+--------+---------------------+------------+
+|  1 |      5608 | Eka    | 2016-09-22 00:00:00 | NULL       |
+|  2 |         0 | Ulaize | 2015-09-22 00:00:00 | NULL       |
++----+-----------+--------+---------------------+------------+
+2 rows in set (0.00 sec)
+
+mysql> UPDATE Entry SET lastName= "Her" WHERE subtype="phone";
+Query OK, 2 rows affected (0.01 sec)
+Rows matched: 4  Changed: 2  Warnings: 0
+
